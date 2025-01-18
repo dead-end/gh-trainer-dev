@@ -60,3 +60,21 @@ File: `svelte.config.js`
 			base: '/gh-trainer'
 		}
 ```
+
+## GH Pages
+
+Install
+
+```bash
+npm install gh-pages --save-dev
+```
+
+Add to file: `package.json`
+
+```
+"deploy": "node ./gh-pages.js"
+```
+
+Add file: `static/.nojekyll`
+
+Add file: `gh-pages.js`
