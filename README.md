@@ -36,3 +36,27 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+# Installation
+
+```bash
+nvm use v22
+npx sv create gh-trainer-dev
+```
+
+- SvelteKit minimal
+- Typescript
+- prettier, eslint, tailwindcss, sveltekit-adapter
+- tailwindcss: forms
+- sveltekit-adapter: static
+- npm
+
+## URL prefix
+
+File: `svelte.config.js`
+
+```
+		paths: {
+			base: '/gh-trainer'
+		}
+```
