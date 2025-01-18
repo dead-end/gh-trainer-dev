@@ -1,3 +1,33 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+	._transition {
+		@apply transition duration-200 ease-in-out;
+	}
+
+	._base {
+		@apply rounded shadow-sm;
+	}
+
+	._input-border {
+		@apply border border-blue-400 focus:border-blue-500 disabled:border-gray-300;
+	}
+
+	._input-ring {
+		@apply outline-none ring-blue-400 focus:outline-none focus:ring-blue-500;
+	}
+
+	.checkbox {
+		@apply _base _input-border _input-ring p-2 disabled:text-gray-500;
+	}
+
+	.input {
+		@apply _base _input-border _input-ring w-full p-2 disabled:bg-gray-50 disabled:text-gray-500;
+	}
+
+	.btn-base {
+		@apply _base _transition px-4 py-2 text-sm font-bold text-white disabled:bg-gray-400;
+	}
+}
