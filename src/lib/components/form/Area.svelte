@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Wrapper from './Wrapper.svelte';
+	import Wrapper from '$lib/components/form/Wrapper.svelte';
 
 	type Props = {
 		id: string;
