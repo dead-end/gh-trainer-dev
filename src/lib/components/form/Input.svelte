@@ -7,7 +7,7 @@
 		value: string;
 		type: string;
 		error: string;
-		disabled: boolean;
+		disabled?: boolean;
 	};
 
 	let { id, label, value = $bindable(), type = 'text', error, disabled = false }: Props = $props();
