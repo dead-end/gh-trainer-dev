@@ -7,6 +7,7 @@
 	import Container from '$lib/components/layout/Container.svelte';
 	import Buttons from '$lib/components/layout/Buttons.svelte';
 	import PageHeader from '$lib/components/layout/PageHeader.svelte';
+	import { validateEmpty } from '$lib/utils/validate';
 
 	let user = $state(githubConfig.user);
 	let userError = $state('');
@@ -19,14 +20,10 @@
 
 	let disabled = $state(true);
 
-	const checkEmpty = (value: string) => {
-		return value ? '' : 'Please enter a value!';
-	};
-
 	const onClick = () => {
-		userError = checkEmpty(user);
-		repoError = checkEmpty(repo);
-		tokenError = checkEmpty(token);
+		userError = validateEmpty(user);
+		repoError = validateEmpty(repo);
+		tokenError = validateEmpty(token);
 
 		if (!userError && !repoError && !tokenError) {
 			githubSetConfig(user, repo, token);
