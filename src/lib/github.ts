@@ -20,7 +20,7 @@ export const githubGetUrl = (user: string, repo: string, path: string) => {
  * The function reads a file from github. A token can be given optionally.
  */
 export const githubReadContent = async (url: string, token: string) => {
-	const headers: any = {
+	const headers: Record<string, string> = {
 		Accept: 'application/vnd.github.v3+json'
 	};
 
@@ -28,7 +28,7 @@ export const githubReadContent = async (url: string, token: string) => {
 		headers.authorization = `token ${token}`;
 	}
 
-	const response = await fetch(url, headers);
+	const response = await fetch(url, { headers: headers });
 	if (!response.ok) {
 		throw new Error(`Return code: ${response.status} - ${response.statusText}`);
 	}
