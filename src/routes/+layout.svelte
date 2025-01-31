@@ -1,10 +1,10 @@
 <script lang="ts">
 	import '../app.css';
-	import Footer from './Footer.svelte';
+	import Footer from '../lib/components/layout/Footer.svelte';
 	let { children } = $props();
 </script>
 
-<div class="container mx-auto bg-slate-100">
+<main class="m-auto mt-4 max-w-screen-lg px-4 text-gray-600 lg:px-0">
 	{@render children()}
 	<Footer />
-</div>
+</main>
