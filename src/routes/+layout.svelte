@@ -1,11 +1,10 @@
 <script lang="ts">
-		import '../app.css';
+	import '../app.css';
 	import Navigation from '$lib/components/layout/Navigation.svelte';
 	import { onMount } from 'svelte';
 	import Footer from '../lib/components/layout/Footer.svelte';
 	import Errors from '$lib/components/layout/Errors.svelte';
 	import { githubInitConfig } from '$lib/models/github.svelte';
-	import { errorAdd } from '$lib/utils/errorStore.svelte';
 	let { children } = $props();
 
 	onMount(() => {

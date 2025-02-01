@@ -5,10 +5,10 @@
 </script>
 
 {#if errorStore.length > 0}
-	<div class="rounded border shadow px-4 py-4 mb-4">
-		<p class="text-red-800 font-bold text-lg pb-4">Errors</p>
+	<div class="mb-4 rounded border px-4 py-4 shadow">
+		<p class="pb-4 text-lg font-bold text-red-800">Errors</p>
 		{#each errorStore as error}
-			<p class="text-red-800 pb-2">{error}</p>
+			<p class="pb-2 text-red-800">{error}</p>
 		{/each}
 		<Buttons>
 			<Button label="Clear" onClick={() => errorReset()} />
