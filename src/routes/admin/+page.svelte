@@ -2,7 +2,7 @@
 	import Button from '$lib/components/layout/Button.svelte';
 	import Input from '$lib/components/form/Input.svelte';
 	import Form from '$lib/components/form/Form.svelte';
-	import { githubConfig, githubSetConfig } from '$lib/github/config.svelte';
+	import { githubConfig, githubSetConfig } from '$lib/models/github.svelte';
 	import Checkbox from '$lib/components/form/Checkbox.svelte';
 	import Container from '$lib/components/layout/Container.svelte';
 	import Buttons from '$lib/components/layout/Buttons.svelte';

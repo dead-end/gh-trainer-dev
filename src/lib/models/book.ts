@@ -1,5 +1,5 @@
 import { githubGetUrl, githubReadContent } from '$lib/github';
-import { githubConfig } from '$lib/github/config.svelte';
+import { githubConfig } from '$lib/models/github.svelte';
 import type { TBook } from '$lib/types';
 
 export const bookListing = async () => {
