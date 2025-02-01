@@ -1,4 +1,5 @@
 export type TGithubConfig = {
+	id: string;
 	user: string;
 	repo: string;
 	token: string;
